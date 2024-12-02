@@ -5,30 +5,47 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Site</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="index.js"></script>
+    <title>Registrace</title>
 </head>
 <body>
     <main>
         <section id="RegisterPage">
-            <h1>Log In</h1>
+            <h1 id="Regh1">Get Started</h1>
+            <p id="Regp">Create your account now!</p>
             <form id="RegisterForm" action="index.html" method="post">
 
                 <label for="fullname">Full Name</label>
-                <input type="text" id="fullname" name="fullname" required>
+                <input type="text" id="fullname" name="fullname" class="TextInputField" required maxlength="50">
 
                 <label for="favoriteday">Favorite Day</label>
-                <input type="date" id="favoriteday" name="favoriteday"required>
+                <input type="date" id="favoriteday" name="favoriteday" class="DateInputField" required>
 
                 <label for="email">Email</label>
-                <input id="email" type="text" name="email"required>
+                <input id="email" type="email" name="email" class="TextInputField" required>
 
                 <label for="password">Password</label>
-                <input id="password" type="password" name="password"required>
+                <input id="password" type="password" name="password" class="TextInputField" required minlength="8">
 
+                <label for="passwordrepeat" id="labelpasswordrepeat" class="HiddenPass">Please Repeat Password</label>
+                <input id="passwordrepeat" type="password" name="password" class="TextInputField HiddenPass" required minlength="8">
 
+                <div id="agediv">
+                    <label for="agenum">What is your age</label>
+                    <input id="agenum" type="number" required min="1" max="128" placeholder="13">
+                </div>
 
-                <input id="SubmitButton" type="submit" value="Log In">
+                <div id="tosdiv">
+                    <label for="tosbutton">I agree to the TOS and Privacy Policy</label>
+                    <input id="tosbutton" type="checkbox">
+                </div>
+
+                <input id="SubmitButton" type="submit" value="Log In" class="RegisterButton">
+
             </form>
+            <span class="LogInTxt">Have an account? <a class="LogInTxt" target="_self" href="index.html" id="LogInText">Click here</a></span>
+
         </section>
     </main>
 </body>
